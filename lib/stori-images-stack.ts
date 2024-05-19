@@ -42,6 +42,7 @@ export class StoriImagesStack extends cdk.Stack {
         PROCESSED_BUCKET: processedBucket.bucketName
       },
       timeout: cdk.Duration.seconds(300),
+      memorySize: 3008,
       role: lambdaRole,
       layers: [pillowLayer]
     });
